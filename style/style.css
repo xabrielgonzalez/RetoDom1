@@ -10,12 +10,12 @@ body::-webkit-scrollbar{
   background-color:#F8EAD8;
 }
 body::-webkit-scrollbar-thumb{
-  background: rgb(255, 248, 185);
+  background: rgb(255, 247, 176);
   border-radius: 50px;
 }
 
 body::-webkit-scrollbar-thumb:hover{
-  background: rgb(255, 245, 157);
+  background: rgb(255, 242, 129);
 }
 
 html{
@@ -278,7 +278,7 @@ h4 {
 }
 
 .containerskill ul li a{
-  display: block;
+  display: inline-block;
   padding:  0 10px;
   background: #333;
   color: #fff;
@@ -590,7 +590,29 @@ h4 {
   font-weight: bold;
 }
 
+.acordeon-item {
+  border-bottom: 1px solid #ddd;
+}
 
+.acordeon-contenido {
+  max-height: 0;
+  overflow: hidden;
+  padding: 10px;
+  transition: max-height 0.3s ease;
+}
 
+.acordeon-item.activo .acordeon-contenido {
+  max-height: 100vh;
+}
 
+.acordeon-btn {
+  font-size: 16px;
+  padding: 5px 10px;
+}
 
+/* División de los botones en dos columnas */
+.acordeon-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
